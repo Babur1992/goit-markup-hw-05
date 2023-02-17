@@ -48,7 +48,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     margin-left: 76px;
     list-style-type:none; 
     display: flex;
-    gap: 24px; 
+    gap: 40px; 
 }
 .menu-contacts{
     
@@ -82,23 +82,26 @@ color:var(--logo);
  .logo-dark{
     color:var(--logo-d)
  }
-
-.link-after::after{
+.link-current.nav-link{
+   color: var(--nav);
+}
+.link-current::after{
   content: "";
   display: block;
   
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
 
   width: 100%;
   height: 4px;
   background-color:var(--nav);
   border-radius:2px;
+  
 }
 
  .nav-link{
 transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-transition-property: background-color #4D5AE5;
+transition-property: background-color;
 transition-duration: 250ms;
 position: relative;
 display: block;
@@ -111,7 +114,7 @@ color: var(--footer)
  }
 
  .contacts-link{
-transition-property: background-color #4D5AE5;
+transition-property: background-color;
  transition-duration: 250ms;
  transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 padding-top: 24px;
@@ -152,10 +155,10 @@ flex-direction: row;
 padding: 12px 24px;
 border: none;
 border-radius: 4px;
-/* transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-transition-property: background-color #4D5AE5;
+transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+transition-property: background-color;
 transition-duration: 250ms; 
-      */
+     
  
 }
 
@@ -171,8 +174,7 @@ transition-duration: 250ms;
     
     background: #FFFFFF;
     padding: 32px 16px;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .card-set{
     
@@ -196,7 +198,7 @@ background: #4D5AE5;
 
 opacity: 0;
 transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-transition-property: background-color #4D5AE5;
+transition-property: background-color;
 transition-duration: 250ms;
 }
 
@@ -210,22 +212,14 @@ transition-duration: 250ms;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     height: 100%;
-    background-color: #4D5AE5;
-    
-}
-.product-overlay{ 
-/* content: ""; */
-position: absolute;
-top:0;
-left: 0;
+    transform: translateY(100%);
 
-width: 100%;
-height: 100%;
 background-color: #4D5AE5;
- transform: translateY(100%);
+
 transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-transition-property: background-color #4D5AE5;
+transition-property:transform;
 transition-duration: 250ms;
 
 }
@@ -234,6 +228,9 @@ transition-duration: 250ms;
 .portfolio-link:focus .product-overlay{
     transform: translateY(0);
     display: block;
+/* transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+transition-property:transform;
+transition-duration: 250ms; */
 
 
 }
@@ -265,6 +262,10 @@ transition-duration: 250ms;
     
    background: #F4F4FD;
    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+transition-property:transform;
+transition-duration: 250ms;
+
 }
 
 
@@ -332,7 +333,7 @@ letter-spacing: 0.02em;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: background-color #4D5AE5;
+    transition-property: background-color;
     transition-duration: 250ms;
 }
 
@@ -369,7 +370,7 @@ margin-bottom: 0;
 .social-link:hover,
 .social-link:focus{
  transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-transition-property: background-color #4D5AE5;
+transition-property: background-color;
 transition-duration: 250ms;
 background: #31D0AA;
 }
@@ -380,9 +381,7 @@ background: #31D0AA;
 
 .btn:hover,
 .btn:focus{
-transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-transition-property: background-color #4D5AE5;
-transition-duration: 250ms;
+
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 background-color: #404BBF;
 color: var(--body);
@@ -400,7 +399,6 @@ color: var(--body);
     color:  #404BBF;
 }
 
-cursor: pointer;
 
 h1,
 h2

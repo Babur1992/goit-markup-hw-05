@@ -75,10 +75,14 @@ a {
   color: var(--logo-d);
 }
 
- .link-after::after{
+.link-current.nav-link{
+  color:var(--bcg-icon);
+}
+
+ .link-current::after{
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
 
   display: block;
   width: 48px;
@@ -98,7 +102,7 @@ a {
   letter-spacing: 0.02em;
   color: var(--bgr);  
 transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-transition-property: background-color #4D5AE5;
+transition-property: color;
 transition-duration: 250ms;  
 }
 .menu-list{
@@ -106,7 +110,7 @@ position: relative;
 margin-left: 76px;
 list-style-type: none;
 display: flex;
-gap: 24px;
+gap: 40px;
 
 }
 
@@ -120,7 +124,7 @@ gap: 24px;
   letter-spacing: 0.02em;
   color: var(--ctc-link);
 transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-transition-property: background-color #4D5AE5;
+transition-property:color;
 transition-duration: 250ms;  
 }
 
@@ -154,7 +158,7 @@ transition-duration: 250ms;
   border-radius: 4px;
   border: none; 
 transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-transition-property: background-color #4D5AE5;
+transition-property: background-color;
 transition-duration: 250ms;  cursor:pointer;
 }
 
@@ -268,7 +272,7 @@ background: #404BBF;
   border-radius: 50%;
   background-color: #4D5AE5;
 transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-transition-property: background-color #4D5AE5;
+transition-property: background-color;
 transition-duration: 250ms;
 }
 
@@ -366,7 +370,9 @@ transition-duration: 25000ms;
   border: 1px solid #8E8F99;
   border-radius: 4px; 
   fill:var(--cst-icon);
- 
+ transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+transition-property:fill;
+transition-duration: 250ms; 
  
  
 }
@@ -376,14 +382,17 @@ transition-duration: 25000ms;
 }
 .customers-icon{
  
-transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-transition-property: background-color #4D5AE5;
-transition-duration: 250ms; 
+/* transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+transition-property: background-color;
+transition-duration: 250ms;  */
 }
 .customers-link:hover,
 .customers-link:focus{
  border: 1px solid #404BBF;
  fill:var(--bcg-icon);
+ /* transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+transition-property:color;
+transition-duration: 250ms;  */
 }
 
 
@@ -416,7 +425,7 @@ transition-duration: 250ms;
   background: rgba(255, 255, 255, 0.1);
 
   transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-transition-property: background-color #4D5AE5;
+transition-property: background-color;
 transition-duration: 250ms; 
 }
 .social-text{
@@ -514,13 +523,13 @@ ul{
    left: 0;
    width: 100%;
    height: 100%; 
-   transition: opacity 0;
+ 
   
    background-color: rgba(0, 0, 0, 0.5);
   
 transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-transition-property: background-color #4D5AE5;
 transition-duration: 250ms;
+transition-property: background-color opasity , visibility;
 }
 .backdrop.is-hidden{
   
@@ -542,7 +551,7 @@ transition-duration: 250ms;
   width: 408px;
   height: 567px;
   
-
+  
 }
 .modal{
  
